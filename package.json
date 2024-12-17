@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp -r dist docs",
+    "rebuild": "tsc -b && vite build && rm -R docs && cp -r dist docs",
     "lint": "eslint .",
     "format": "npx prettier . --write",
     "preview": "vite preview"
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
+    "@types/node": "^22.10.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
