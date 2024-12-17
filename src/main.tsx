@@ -8,7 +8,7 @@ import { MainLayout } from "./layout/mainLayout";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
