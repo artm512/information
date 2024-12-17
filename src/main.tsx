@@ -6,9 +6,11 @@ import { Home } from "./pages/home/index.tsx";
 import { About } from "./pages/about/index.tsx";
 import { MainLayout } from "./layout/mainLayout";
 
+const APP_NAME = "information";
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={`/${APP_NAME}`}>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
