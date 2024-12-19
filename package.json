@@ -20,6 +20,8 @@
     "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@eslint/js": "^9.15.0",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.2",
