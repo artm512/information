@@ -19,12 +19,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.ts?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
+        options: {
+          targets: "defaults",
+          presets: [["@babel/preset-env"]],
+        },
       },
       {
-        test: /\.ts$/,
+        test: /\.ts?$/,
         exclude: /node_modules/,
         loader: "ts-loader",
         options: {
@@ -34,6 +38,10 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".js", ".json"],
+    fallback: {
+      fs: false,
+      path: false,
+    },
+    extensions: [".ts", ".tsx", ".js", ".json"],
   },
 };
